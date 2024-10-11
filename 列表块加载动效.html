@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>列表块加载动效</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list-box70 {
+            width: 200px;
+            height: 76px;
+            position: relative;
+            background-color: #f8f8f8;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .pic70 {
+            width: 44px;
+            height: 44px;
+            position: relative;
+            background-color: #e4e4e4;
+            border-radius: 4px;
+            animation: eff70 1.8s linear infinite;
+        }
+
+        .list70 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .span70 {
+            width: 114px;
+            height: 20px;
+            position: relative;
+            border-radius: 4px;
+            background-color: #e4e4e4;
+            animation: eff70 2s linear infinite;
+        }
+
+        .span-div70 {
+            position: relative;
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .span701,
+        .span702 {
+            width: 65px;
+            height: 14px;
+            position: relative;
+            border-radius: 4px;
+            background-color: #e4e4e4;
+            animation: eff70 2.2s linear infinite;
+        }
+
+        .span702 {
+            width: 39px;
+            margin-left: 10px;
+            animation: eff70 2.4s linear infinite;
+        }
+
+        @keyframes eff70 {
+            0% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="list-box70">
+            <div class="pic70"></div>
+            <div class="list70">
+                <span class="span70"></span>
+                <div class="span-div70">
+                    <span class="span701"></span>
+                    <span class="span702"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

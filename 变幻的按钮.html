@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>变幻的按钮</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn63 {
+            width: 140px;
+            height: 54px;
+            border: none;
+            border-radius: 9px;
+            background-color: transparent;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn63::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(90deg, #FA8BFF 20%, #2BD2FF 50%, #2BFF88 80%);
+            filter: blur(16px);
+            animation: eff63 4s linear infinite;
+        }
+
+        .btn63::after {
+            content: attr(data-text);
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.6);
+            letter-spacing: 2px;
+            position: absolute;
+            transition: all .3s linear;
+        }
+
+        @keyframes eff63 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .btn63:hover::before {
+            width: 140px;
+            height: 140px;
+            filter: blur(24px);
+        }
+
+        .btn63:hover::after {
+            color: rgba(0, 0, 0, 0.9);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        .btn63:active {
+            transform: scale(0.9) translateY(2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <button class="btn63" data-text="Hover"></button>
+    </div>
+</body>
+
+</html>

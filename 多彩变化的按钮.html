@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>多彩变化的按钮</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            width: 140px;
+            height: 46px;
+            font-size: 16px;
+            font-weight: 700;
+            color: black;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background-color: #4158D0;
+            background-image: linear-gradient(90deg, #4158D0 0%, #C850C0 17%, #e6a731 39%, #8329e2 60%, #3fb75f 80%, #4158D0 100%);
+            box-shadow: 0 0 0 2px #000000;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        button:hover {
+            color: #ffffff;
+            animation: quick 0.5s linear infinite;
+        }
+
+        @keyframes quick {
+            to {
+                background-position: 140px;
+            }
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <button>戳一下</button>
+    </div>
+</body>
+
+</html>

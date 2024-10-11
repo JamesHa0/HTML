@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>文字跑马灯按钮</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .abtn57 {
+            width: 140px;
+            height: 46px;
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #457356;
+            position: relative;
+            cursor: pointer;
+            border-radius: 23px;
+            overflow: hidden;
+        }
+
+        .btn57,
+        .bg57 {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .bg57 {
+            position: absolute;
+            text-shadow: 90px 0 #fff, -90px 0 #fff, -180px 0 #fff;
+            animation: effx57 1.2s linear infinite;
+            display: none;
+        }
+
+        @keyframes effx57 {
+            to {
+                transform: translateX(90px);
+            }
+        }
+
+        .abtn57:hover .bg57 {
+            display: block;
+        }
+
+        .abtn57:hover .btn57 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <a href="javascript:;" class="abtn57">
+            <div class="btn57">一个按钮</div>
+            <span class="bg57">一个按钮</span>
+        </a>
+    </div>
+</body>
+
+</html>

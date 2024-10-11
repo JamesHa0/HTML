@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>圆点交互按钮</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn29 {
+            width: 100px;
+            height: 42px;
+            line-height: 42px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .btn29-bg {
+            width: 30px;
+            height: 30px;
+            display: block;
+            border-radius: 15px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #97E138;
+            transition: 0.24s;
+        }
+
+        .btn29-span-text {
+            width: 100%;
+            text-align: center;
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            color: #056C00;
+            position: absolute;
+        }
+
+        .btn29:hover .btn29-bg {
+            width: 100%;
+            height: 42px;
+            border-radius: 21px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="btn29">
+            <span class="btn29-bg"></span>
+            <span class="btn29-span-text">查看详情</span>
+        </div>
+    </div>
+</body>
+
+</html>

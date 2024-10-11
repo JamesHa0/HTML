@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>一串乱码</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .font25 {
+            position: relative;
+            font-size: 24px;
+            font-weight: 900;
+            color: #1630f1;
+            letter-spacing: 10px;
+            background-color: #ffffff;
+        }
+
+        .font25:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            background-color: inherit;
+            animation: text-ani25 2.4s linear infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes text-ani25 {
+            0% {
+                content: "$-";
+                left: 0;
+            }
+
+            5% {
+                content: ";y";
+                left: 0;
+            }
+
+            10% {
+                content: "*&#H";
+                left: 0;
+            }
+
+            15% {
+                content: "-!);";
+                left: 0;
+            }
+
+            20% {
+                content: "#$_}-'";
+                left: 0;
+            }
+
+            25% {
+                content: ":0^!$.";
+                left: 0;
+            }
+
+            30% {
+                content: "#{+.-?#u";
+                left: 0;
+            }
+
+            35% {
+                content: "f7*%}-;#";
+                left: 0;
+            }
+
+            40% {
+                content: "^='?'*$!";
+                left: 0;
+            }
+
+            45% {
+                content: "+0^&!`^-";
+                left: 0;
+            }
+
+            50% {
+                content: "&-?>-=|`";
+                left: 0;
+            }
+
+            55% {
+                content: "u<|:#-";
+                left: auto;
+                right: 0;
+            }
+
+            60% {
+                content: ";~0![,";
+                left: auto;
+                right: 0;
+            }
+
+            65% {
+                content: ")+->";
+                left: auto;
+                right: 0;
+            }
+
+            70% {
+                content: "+.=d";
+                left: auto;
+                right: 0;
+            }
+
+            75% {
+                content: "&%";
+                left: auto;
+                right: 0;
+            }
+
+            80% {
+                content: "`@";
+                left: auto;
+                right: 0;
+            }
+
+            85% {
+                content: "-";
+                left: auto;
+                right: 0;
+            }
+
+            90% {
+                content: "#";
+                left: auto;
+                right: 0;
+            }
+
+            95% {
+                content: "";
+                left: 0;
+            }
+
+            100% {
+                content: "";
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="font25">The Bug!</div>
+    </div>
+</body>
+
+</html>

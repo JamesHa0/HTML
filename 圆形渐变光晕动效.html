@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>圆形渐变光晕动效</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .light-round82 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: relative;
+            background-image: linear-gradient(0deg, #FA8BFF 20%, #2BFF88 80%);
+            box-shadow: 0 4px 20px #FA8BFF, 0 -4px 20px #2BFF88;
+            filter: blur(2px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: eff82 2s linear infinite;
+        }
+
+        .light-round82:after {
+            content: '';
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            filter: blur(8px);
+        }
+
+        @keyframes eff82 {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="light-round82"></div>
+    </div>
+</body>
+
+</html>

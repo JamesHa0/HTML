@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>卡片翻转效果</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card54 {
+            width: 100px;
+            height: 46px;
+            cursor: pointer;
+            box-sizing: border-box;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .card54::before,
+        .card54::after {
+            width: 100px;
+            height: 46px;
+            border-radius: 9px;
+            border: 1px dashed #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            content: '有彩蛋';
+            background-color: #36AFCA;
+            box-shadow: 0 0 0 4px #36AFCA;
+            transition: transform 0.5s ease;
+            backface-visibility: hidden;
+        }
+
+        .card54::after {
+            content: '叫爸爸';
+            background-color: #F89C6B;
+            box-shadow: 0 0 0 4px #F89C6B;
+            transform: rotateY(180deg);
+        }
+
+        .card54:hover::before {
+            transform: rotateY(180deg);
+        }
+
+        .card54:hover::after {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="card54"></div>
+    </div>
+</body>
+
+</html>

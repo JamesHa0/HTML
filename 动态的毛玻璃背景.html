@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>动态的毛玻璃背景</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 400px;
+            height: 300px;
+            position: relative;
+        }
+
+        .circle-box {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .circle:first-child {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 30px solid #7BF52A;
+            box-sizing: border-box;
+            position: absolute;
+            top: -38px;
+            left: -40px;
+            animation: move-y 3.5s linear infinite;
+        }
+
+        .circle:last-child {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(136deg, #7BF52A 0%, #FFCD56 100%);
+            box-sizing: border-box;
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            animation: move-y 5s ease-in-out infinite;
+        }
+
+        .bg-filter {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, .05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6px);
+            border-radius: 10px;
+            box-sizing: border-box;
+            position: absolute;
+        }
+
+        @keyframes move-y {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-16px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="box">
+            <div class="circle-box">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="bg-filter"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>3D旋转画廊</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            justify-content: center;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .image-container {
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: perspective(1000px) rotateY(0deg);
+            transition: transform 0.7s;
+        }
+
+        .image-container span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transform: rotateY(calc(var(--i) * 90deg)) translateZ(400px);
+        }
+
+        .image-container span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            aspect-ratio: 1/1;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .btn-container {
+            position: relative;
+            width: 80%;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: -140px;
+            background-color: slateblue;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            filter: brightness(1.5);
+        }
+
+        #prev {
+            left: 20%;
+        }
+
+        #next {
+            right: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container"><span style="--i: 1"><img
+                src="https://pic.rmb.bdstatic.com/bjh/240709/dump/642a76897b5a09c4045857b5202ef43b.jpeg" /></span><span
+            style="--i: 2"><img
+                src="https://p8.itc.cn/images01/20231103/ed19cf8c13e448d2af1d97c437cf97d8.jpeg" /></span><span
+            style="--i: 3"><img
+                src="https://pic.rmb.bdstatic.com/bjh/240709/dump/acf16e2f1a8cb09f0ca6e460371dbc02.jpeg" /></span><span
+            style="--i: 4"><img
+                src="https://p6.itc.cn/images01/20231028/67683d3e4edd4202a0397201940cbd84.jpeg" /></span></div>
+    <div class="btn-container"><button class="btn" id="prev"><i class="fa-solid fa-rotate-left"></i></button><button
+            class="btn" id="next"><i class="fa-solid fa-rotate-right"></i></button></div>
+    <script>const imageContainerEl = document.querySelector('.image-container'); const prevEl = document.getElementById('prev'); const nextEl = document.getElementById('next'); let x = 0; prevEl.addEventListener('click', () => { x += 90; updateGallery() }); nextEl.addEventListener('click', () => { x -= 90; updateGallery() }); function updateGallery() { imageContainerEl.style.transform = `perspective(1000px)rotateY(${x}deg)` } updateGallery();</script>
+</body>
+
+</html>

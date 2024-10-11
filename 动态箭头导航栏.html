@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>动态箭头导航栏</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav84 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-a84 {
+            width: max-content;
+            padding: 10px 8px 10px 32px;
+            margin: 0 10px;
+            font-size: 16px;
+            line-height: 1;
+            letter-spacing: 2px;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            display: block;
+        }
+
+        .nav-a84:before,
+        .nav-a84:after {
+            content: '';
+            width: 10px;
+            height: 3px;
+            background-color: #888;
+            position: absolute;
+            left: 8px;
+            top: 18px;
+            transition: all 0.2s linear;
+        }
+
+        .nav-a84:after {
+            left: 14px;
+        }
+
+        .nav-a84:hover:before {
+            transform: rotate(45deg);
+        }
+
+        .nav-a84:hover:after {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <nav class="nav84">
+            <a href="javascript:;" class="nav-a84">设计</a>
+            <a href="javascript:;" class="nav-a84">前端</a>
+        </nav>
+    </div>
+</body>
+
+</html>

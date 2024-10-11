@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>跷跷板加载动画</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading73 {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: center center;
+            animation: effbox73 3s cubic-bezier(0, 0.6, 1, 0.4) infinite;
+        }
+
+        @keyframes effbox73 {
+            0% {
+                transform: rotate(-30deg);
+            }
+
+            40% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(30deg);
+            }
+
+            90% {
+                transform: rotate(-30deg);
+            }
+
+            100% {
+                transform: rotate(-30deg);
+            }
+        }
+
+        .loading73::before {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+        }
+
+        .loading73::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-color: #089f1f;
+            position: absolute;
+            top: 21px;
+            left: 0;
+            border-radius: 3px;
+            animation: eff73 3s ease-in-out infinite;
+        }
+
+        @keyframes eff73 {
+            0% {
+                transform: translateX(0) rotate(0);
+            }
+
+            10% {
+                transform: translateX(16px) rotate(90deg);
+            }
+
+            20% {
+                transform: translateX(32px) rotate(180deg);
+            }
+
+            30% {
+                transform: translateX(48px) rotate(270deg);
+            }
+
+            40% {
+                transform: translateX(64px) rotate(360deg);
+            }
+
+            50% {
+                transform: translateX(64px) rotate(360deg);
+            }
+
+            60% {
+                transform: translateX(48px) rotate(270deg);
+            }
+
+            70% {
+                transform: translateX(32px) rotate(180deg);
+            }
+
+            80% {
+                transform: translateX(16px) rotate(90deg);
+            }
+
+            90% {
+                transform: translateX(0) rotate(0);
+            }
+
+            100% {
+                transform: translateX(0) rotate(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="loading73"></div>
+    </div>
+</body>
+
+</html>

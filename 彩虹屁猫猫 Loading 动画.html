@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>彩虹屁猫猫 Loading 动画</title>
+  <style>
+    body {
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    svg {
+      mask-image: linear-gradient(to left, #000000 70%, #ffffff00 84%);
+      -webkit-mask-image: linear-gradient(to left, #000000 70%, #ffffff00 84%);
+      width: 400px;
+    }
+
+    #animation-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .animation-rainbow-cat .rainbow-color1 {
+      stop-color: #fc0101;
+    }
+
+    .animation-rainbow-cat .rainbow-color2 {
+      stop-color: #fe9900;
+    }
+
+    .animation-rainbow-cat .rainbow-color3 {
+      stop-color: #ffff00;
+    }
+
+    .animation-rainbow-cat .rainbow-color4 {
+      stop-color: #33ff00;
+    }
+
+    .animation-rainbow-cat .rainbow-color5 {
+      stop-color: #0099ff;
+    }
+
+    .animation-rainbow-cat .rainbow-color6 {
+      stop-color: #6734ff;
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect {
+      width: 5px;
+      stroke: transparent;
+      fill: url(#rainbow-colors);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect:nth-of-type(1) {
+      height: 7px;
+      transform: translate(40px, 6px);
+      animation: rainbow-boost-1 0.2s linear 0.2s infinite alternate;
+    }
+
+    @keyframes rainbow-boost-1 {
+      to {
+        transform: translate(40px, 7px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect:nth-of-type(2) {
+      height: 6.9px;
+      transform: translate(35.1px, 5.8px);
+      animation: rainbow-boost-2 0.2s linear 0.23s infinite alternate;
+    }
+
+    @keyframes rainbow-boost-2 {
+      to {
+        transform: translate(35.1px, 7.2px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect:nth-of-type(3) {
+      height: 6.7px;
+      transform: translate(30.2px, 5.6px);
+      animation: rainbow-boost-3 0.2s linear 0.26s infinite alternate;
+    }
+
+    @keyframes rainbow-boost-3 {
+      to {
+        transform: translate(30.2px, 7.4px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect:nth-of-type(4) {
+      height: 6.6px;
+      transform: translate(25.3px, 5.5px);
+      animation: rainbow-boost-4 0.2s linear 0.29s infinite alternate;
+    }
+
+    @keyframes rainbow-boost-4 {
+      to {
+        transform: translate(25.3px, 7.5px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect:nth-of-type(5) {
+      height: 6.4px;
+      transform: translate(20.4px, 5.3px);
+      animation: rainbow-boost-5 0.2s linear 0.32s infinite alternate;
+    }
+
+    @keyframes rainbow-boost-5 {
+      to {
+        transform: translate(20.4px, 7.7px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect:nth-of-type(6) {
+      height: 6.3px;
+      transform: translate(15.6px, 5.1px);
+      animation: rainbow-boost-6 0.2s linear 0.35s infinite alternate;
+    }
+
+    @keyframes rainbow-boost-6 {
+      to {
+        transform: translate(15.6px, 7.9px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .rainbow rect:nth-of-type(7) {
+      height: 6.2px;
+      transform: translate(10.8px, 5px);
+      animation: rainbow-boost-7 0.2s linear 0.38s infinite alternate;
+    }
+
+    @keyframes rainbow-boost-7 {
+      to {
+        transform: translate(10.8px, 8px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(1) {
+      width: 9px;
+      height: 9px;
+      fill: black;
+      transform: translate(1px, 0px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(2) {
+      width: 11px;
+      height: 7px;
+      fill: black;
+      transform: translate(0px, 1px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(3) {
+      width: 10px;
+      height: 8px;
+      fill: black;
+      transform: translate(0.5px, 0.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(4) {
+      width: 10px;
+      height: 7px;
+      fill: #ffcd8e;
+      transform: translate(0.5px, 1px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(5) {
+      width: 9px;
+      height: 8px;
+      fill: #ffcd8e;
+      transform: translate(1px, 0.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(6) {
+      width: 8px;
+      height: 6px;
+      fill: #ff99ff;
+      transform: translate(1.5px, 1.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(7) {
+      width: 7px;
+      height: 7px;
+      fill: #ff99ff;
+      transform: translate(2px, 1px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(8) {
+      width: 9px;
+      height: 5px;
+      fill: #ff99ff;
+      transform: translate(1px, 2px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(9) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(2px, 2px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(10) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(2px, 7px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(11) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(1.5px, 5.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(12) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(2.5px, 4.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(13) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(4px, 3.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(14) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(4.5px, 5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(15) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(3.5px, 6.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(16) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(4.5px, 1.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(17) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(6.5px, 1.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-bread rect:nth-of-type(18) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: #fd1a97;
+      transform: translate(8.5px, 2.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(1) {
+      width: 0.5px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(2.5px, 5.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(2) {
+      width: 1.5px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(1.5px, 5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(3) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(1px, 4.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(4) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(0.5px, 4px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(5) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(0px, 3.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(6) {
+      width: 1px;
+      height: 0.6px;
+      fill: #989898;
+      transform: translate(2px, 5.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(7) {
+      width: 1px;
+      height: 0.6px;
+      fill: #989898;
+      transform: translate(1.5px, 5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(8) {
+      width: 1px;
+      height: 0.6px;
+      fill: #989898;
+      transform: translate(1px, 4.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(9) {
+      width: 1px;
+      height: 0.6px;
+      fill: #989898;
+      transform: translate(0.5px, 4px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(1) {
+      width: 8px;
+      height: 2.5px;
+      fill: black;
+      transform: translate(5px, 5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(2) {
+      width: 7px;
+      height: 4px;
+      fill: black;
+      transform: translate(5.5px, 4px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(3) {
+      width: 6px;
+      height: 4.5px;
+      fill: black;
+      transform: translate(6px, 4px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(4) {
+      width: 5px;
+      height: 5px;
+      fill: black;
+      transform: translate(6.5px, 4px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(5) {
+      width: 2.5px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(5.5px, 3.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(6) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(5.5px, 3px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(7) {
+      width: 1px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(6px, 2.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(8) {
+      width: 2.5px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(10px, 3.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(9) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(10.5px, 3px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(10) {
+      width: 1px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(11px, 2.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(11) {
+      width: 7px;
+      height: 2.5px;
+      fill: #989898;
+      transform: translate(5.5px, 5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(12) {
+      width: 6px;
+      height: 3.5px;
+      fill: #989898;
+      transform: translate(6px, 4.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(13) {
+      width: 5px;
+      height: 4px;
+      fill: #989898;
+      transform: translate(6.5px, 4.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(14) {
+      width: 2px;
+      height: 1.5px;
+      fill: #989898;
+      transform: translate(6px, 4px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(15) {
+      width: 1.5px;
+      height: 1.5px;
+      fill: #989898;
+      transform: translate(6px, 3.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(16) {
+      width: 1px;
+      height: 1.5px;
+      fill: #989898;
+      transform: translate(6px, 3px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(17) {
+      width: 2px;
+      height: 1.5px;
+      fill: #989898;
+      transform: translate(10px, 4px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(18) {
+      width: 1.5px;
+      height: 1.5px;
+      fill: #989898;
+      transform: translate(10.5px, 3.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(19) {
+      width: 1px;
+      height: 1.5px;
+      fill: #989898;
+      transform: translate(11px, 3px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(20) {
+      width: 1px;
+      height: 1px;
+      fill: #ff9999;
+      transform: translate(6px, 6.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(21) {
+      width: 1px;
+      height: 1px;
+      fill: #ff9999;
+      transform: translate(11.5px, 6.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(22) {
+      width: 1px;
+      height: 1px;
+      fill: black;
+      transform: translate(7px, 5.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(23) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: white;
+      transform: translate(7px, 5.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(24) {
+      width: 1px;
+      height: 1px;
+      fill: black;
+      transform: translate(10.5px, 5.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(25) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: white;
+      transform: translate(10.5px, 5.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(26) {
+      width: 0.5px;
+      height: 0.5px;
+      fill: black;
+      transform: translate(9.5px, 6px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(27) {
+      width: 3.5px;
+      height: 0.5px;
+      fill: black;
+      transform: translate(7.5px, 7.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(28) {
+      width: 0.5px;
+      height: 1px;
+      fill: black;
+      transform: translate(7.5px, 7px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(29) {
+      width: 0.5px;
+      height: 1px;
+      fill: black;
+      transform: translate(9px, 7px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head rect:nth-of-type(30) {
+      width: 0.5px;
+      height: 1px;
+      fill: black;
+      transform: translate(10.5px, 7px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(1) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(0px, 7.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(2) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(-0.5px, 8px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(3) {
+      width: 2px;
+      height: 1.5px;
+      fill: black;
+      transform: translate(-1px, 8.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(4) {
+      width: 1.5px;
+      height: 0.6px;
+      fill: #989898;
+      transform: translate(0.5px, 8px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(5) {
+      width: 1.5px;
+      height: 0.5px;
+      fill: #989898;
+      transform: translate(-0.5px, 8.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(6) {
+      width: 1px;
+      height: 1px;
+      fill: #989898;
+      transform: translate(-0.5px, 8.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(7) {
+      width: 1.5px;
+      height: 1px;
+      fill: black;
+      transform: translate(2px, 9px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(8) {
+      width: 2px;
+      height: 0.5px;
+      fill: black;
+      transform: translate(2px, 9px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(9) {
+      width: 1px;
+      height: 0.5px;
+      fill: #989898;
+      transform: translate(2.5px, 9px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(10) {
+      width: 1.5px;
+      height: 1px;
+      fill: black;
+      transform: translate(7px, 9px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(11) {
+      width: 2px;
+      height: 0.5px;
+      fill: black;
+      transform: translate(6.5px, 9px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(12) {
+      width: 1px;
+      height: 0.5px;
+      fill: #989898;
+      transform: translate(7px, 9px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(13) {
+      width: 1px;
+      height: 1px;
+      fill: black;
+      transform: translate(9.5px, 9px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(14) {
+      width: 2px;
+      height: 1px;
+      fill: black;
+      transform: translate(9px, 8.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(15) {
+      width: 1px;
+      height: 1px;
+      fill: #989898;
+      transform: translate(9.5px, 8.5px);
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat {
+      animation: cat-move 0.35s linear 0.2s infinite;
+    }
+
+    @keyframes cat-move {
+      50% {
+        transform: translate(0px, 0px);
+      }
+
+      50% {
+        transform: translate(0.3px, -0.5px);
+      }
+
+      100% {
+        transform: translate(1px, 0px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-head {
+      animation: cat-head-move 0.35s cubic-bezier(0.95, -0.11, 0.56, 0.67) 0.2s infinite;
+    }
+
+    @keyframes cat-head-move {
+      0% {
+        transform: translate(43.5px, 5px);
+      }
+
+      50% {
+        transform: translate(44px, 5.5px);
+      }
+
+      100% {
+        transform: translate(43px, 5.5px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs {
+      animation: cat-legs-move 0.14s cubic-bezier(0.95, -0.11, 0.56, 0.67) 0.3s infinite alternate;
+    }
+
+    @keyframes cat-legs-move {
+      from {
+        transform: translate(43px, 5.5px);
+      }
+
+      to {
+        transform: translate(42.5px, 5.5px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(7) {
+      animation: cat-back-leg 0.42s cubic-bezier(0.94, -0.35, 0, 1.2) 0.3s infinite;
+    }
+
+    @keyframes cat-back-leg {
+      to {
+        transform: translate(2.5px, 9px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-legs rect:nth-of-type(10) {
+      animation: cat-front-leg 0.42s cubic-bezier(0.94, -0.35, 0, 1.2) 0.3s infinite;
+    }
+
+    @keyframes cat-front-leg {
+      to {
+        transform: translate(6.5px, 9px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(2) {
+      animation: cat-tail-1 0.4s ease-in-out 0.26s infinite alternate;
+    }
+
+    @keyframes cat-tail-1 {
+      to {
+        transform: translate(1.5px, 5.5px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(6) {
+      animation: cat-tail-5 0.4s ease-in-out 0.264s infinite alternate;
+    }
+
+    @keyframes cat-tail-5 {
+      to {
+        transform: translate(2px, 6px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(3) {
+      animation: cat-tail-2 0.4s ease-in-out 0.24s infinite alternate;
+    }
+
+    @keyframes cat-tail-2 {
+      to {
+        transform: translate(1px, 6px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(7) {
+      animation: cat-tail-6 0.4s ease-in-out 0.244s infinite alternate;
+    }
+
+    @keyframes cat-tail-6 {
+      to {
+        transform: translate(1.5px, 6.5px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(4) {
+      animation: cat-tail-3 0.4s ease-in-out 0.22s infinite alternate;
+    }
+
+    @keyframes cat-tail-3 {
+      to {
+        transform: translate(0px, 6.5px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(8) {
+      animation: cat-tail-7 0.4s ease-in-out 0.224s infinite alternate;
+    }
+
+    @keyframes cat-tail-7 {
+      to {
+        transform: translate(0.7px, 6.8px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(5) {
+      animation: cat-tail-4 0.4s ease-in-out 0.18s infinite alternate;
+    }
+
+    @keyframes cat-tail-4 {
+      to {
+        width: 1.5px;
+        height: 1.3px;
+        transform: translate(-0.4px, 7px);
+      }
+    }
+
+    .animation-rainbow-cat .rainbow-cat .cat .cat-tail rect:nth-of-type(9) {
+      animation: cat-tail-8 0.4s ease-in-out 0.2s infinite alternate;
+    }
+
+    @keyframes cat-tail-8 {
+      to {
+        transform: translate(0.2px, 7.2px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="animation-container"><svg class="animation-rainbow-cat" viewbox="0 0 70 20">
+      <defs>
+        <linearGradient id="rainbow-colors" x1="0.5" x2="0.5" y2="1">
+          <stop class="rainbow-color1" offset="0" />
+          <stop class="rainbow-color1" offset="0.167" />
+          <stop class="rainbow-color2" offset="0.167" />
+          <stop class="rainbow-color2" offset="0.335" />
+          <stop class="rainbow-color3" offset="0.335" />
+          <stop class="rainbow-color3" offset="0.5" />
+          <stop class="rainbow-color4" offset="0.5" />
+          <stop class="rainbow-color4" offset="0.669" />
+          <stop class="rainbow-color5" offset="0.669" />
+          <stop class="rainbow-color5" offset="0.833" />
+          <stop class="rainbow-color6" offset="0.833" />
+          <stop class="rainbow-color6" offset="1" />
+        </linearGradient>
+      </defs>
+      <g class="rainbow-cat">
+        <g class="rainbow">
+          <rect />
+          <rect />
+          <rect />
+          <rect />
+          <rect />
+          <rect />
+          <rect />
+        </g>
+        <g class="cat">
+          <g class="cat-tail" transform="translate(40, 5.5)">
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+          </g>
+          <g class="cat-legs" transform="translate(43, 5.5)">
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+          </g>
+          <g class="cat-bread" transform="translate(43, 5.5)">
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+          </g>
+          <g class="cat-head" transform="translate(43, 5.5)">
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+            <rect />
+          </g>
+        </g>
+      </g>
+    </svg></div>
+</body>
+
+</html>

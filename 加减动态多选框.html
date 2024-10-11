@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>加减动态多选框</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .label67 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .check-inp67 {
+            width: 32px;
+            height: 32px;
+            border-radius: 5px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s linear;
+            z-index: 1;
+            cursor: pointer;
+            appearance: none;
+            /* none时可以自定义其外观 */
+        }
+
+        .span67 {
+            width: 20px;
+            height: 20px;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .span67::before,
+        .span67::after {
+            content: '';
+            width: 20px;
+            height: 4px;
+            background-color: #0093E9;
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            top: 8px;
+        }
+
+        .span67::after {
+            transform: rotate(90deg);
+            transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .label67:hover .check-inp67 {
+            background-color: rgba(0, 0, 0, 0.09);
+        }
+
+        .check-inp67:checked+.span67::after {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <label class="label67">
+            <input type="checkbox" class="check-inp67">
+            <span class="span67"></span>
+        </label>
+    </div>
+</body>
+
+</html>

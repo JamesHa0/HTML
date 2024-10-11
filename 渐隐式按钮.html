@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>渐隐式按钮</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn83 {
+            width: 120px;
+            height: 48px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            position: relative;
+            border: none;
+            outline: none;
+            background-color: #25c10f;
+            border-radius: 7px;
+            cursor: pointer;
+            box-shadow: 0 0 0 4px #15521a;
+            transition: all 0.1s linear;
+        }
+
+        .btn83:after {
+            content: 'BUTTON';
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            color: #155329;
+            letter-spacing: 2px;
+            position: absolute;
+            left: 0;
+            opacity: 1;
+            transition: all 0.3s linear;
+        }
+
+        .btn83:hover:after {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .btn83:active {
+            transform: scale(0.99);
+            box-shadow: 0 0 0 2px #15521a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <button class="btn83">BUTTON</button>
+    </div>
+</body>
+
+</html>

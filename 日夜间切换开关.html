@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>日夜间切换开关</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .label78 {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .checkbox78 {
+            width: 90px;
+            height: 40px;
+            background-color: #000000;
+            border-radius: 20px;
+            margin: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: all 0.4s linear;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .status78 {
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            box-shadow: inset -6px -4px 0 yellow;
+            border-radius: 50%;
+            position: absolute;
+            right: 17px;
+            top: 12px;
+            transition: all 0.4s linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .status78:after {
+            content: '夜间';
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 3px;
+            line-height: 1;
+            position: absolute;
+            left: -38px;
+            top: 1px;
+        }
+
+        .checkbox78:checked {
+            background-color: #ebebeb;
+        }
+
+        .checkbox78:checked+.status78 {
+            width: 16px;
+            height: 16px;
+            box-shadow: inset -16px -16px 0 red;
+            right: 17px;
+        }
+
+        .checkbox78:checked+.status78:after {
+            content: '日间';
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <label class="label78">
+            <input type="checkbox" class="checkbox78" />
+            <div class="status78"></div>
+        </label>
+    </div>
+</body>
+
+</html>

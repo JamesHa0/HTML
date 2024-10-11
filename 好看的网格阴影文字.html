@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>好看的网格阴影文字</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .font21 {
+            color: transparent;
+            font-size: 70px;
+            font-weight: 900;
+            letter-spacing: 10px;
+            background-image: linear-gradient(-45deg, #ffffff 0%, #ffffff 25%, green 25%, green 50%, #ffffff 50%, #ffffff 75%, green 75%, green 100%);
+            background-size: 4px 4px;
+            -webkit-background-clip: text;
+            position: relative;
+        }
+
+        .font21:before {
+            content: attr(data-text);
+            letter-spacing: 10px;
+            color: green;
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            text-shadow: 2px 2px #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="font21" data-text="不就是玩嘛">不就是<br>玩嘛</div>
+    </div>
+    </div>
+</body>
+
+</html>

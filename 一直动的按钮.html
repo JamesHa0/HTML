@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>一直动的按钮</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn15 {
+            width: 140px;
+            height: 48px;
+            line-height: 48px;
+            background-color: #eee;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            color: #333333;
+            text-align: center;
+            transition: all 0.24s linear;
+        }
+
+        .btn15:hover {
+            cursor: pointer;
+            color: #fff;
+            background-color: #253ed2;
+            animation: yizhidong 0.24s linear infinite;
+        }
+
+        @keyframes yizhidong {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-3px, 3px);
+            }
+
+            40% {
+                transform: translate(-2px, -3px);
+            }
+
+            60% {
+                transform: translate(3px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -3px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <button class="btn15">动起来</button>
+    </div>
+</body>
+
+</html>

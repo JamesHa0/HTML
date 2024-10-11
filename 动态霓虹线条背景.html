@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态霓虹线条背景</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .neon-container {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .neon-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #ff00ff, transparent);
+            height: 2px;
+            width: 100%;
+            animation: neon-pulse 4s infinite;
+        }
+
+        .neon-line:nth-child(1) {
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .neon-line:nth-child(2) {
+            top: 40%;
+            animation-delay: -1s;
+        }
+
+        .neon-line:nth-child(3) {
+            top: 60%;
+            animation-delay: -2s;
+        }
+
+        .neon-line:nth-child(4) {
+            top: 80%;
+            animation-delay: -3s;
+        }
+
+        @keyframes neon-pulse {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="neon-container">
+        <div class="neon-line"></div>
+        <div class="neon-line"></div>
+        <div class="neon-line"></div>
+        <div class="neon-line"></div>
+    </div>
+</body>
+
+</html>

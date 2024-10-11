@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>引导式详情按钮</title>
+    <style>
+        .btn58 {
+            width: 120px;
+            height: 32px;
+            position: relative;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .icon58 {
+            width: 32px;
+            height: 32px;
+            position: relative;
+            box-sizing: border-box;
+            background-color: #ffd845;
+            display: block;
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        .icon58:before,
+        .icon58:after {
+            content: '';
+            width: 3px;
+            height: 10px;
+            background-color: #000000;
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            transform: rotate(-45deg);
+        }
+
+        .icon58:after {
+            top: 14px;
+            left: 16px;
+            transform: rotate(45deg);
+        }
+
+        .btn-text58 {
+            font-size: 16px;
+            color: #000000;
+            font-weight: bold;
+            display: block;
+            position: absolute;
+            left: 40px;
+        }
+
+        .btn58:hover .icon58 {
+            width: 120px;
+        }
+
+        .btn58:hover .icon58:before,
+        .btn58:hover .icon58:after {
+            animation: move58eff 1.2s linear infinite;
+        }
+
+        @keyframes move58eff {
+            0% {
+                left: 16px;
+            }
+
+            50% {
+                left: 26px;
+            }
+
+            100% {
+                left: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <button class="btn58">
+            <span class="icon58"></span>
+            <span class="btn-text58">查看详情</span>
+        </button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>搜索框小动效</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            position: relative;
+        }
+
+        input {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            outline-style: none;
+            font-size: 16px;
+            color: #333;
+            border: 3px solid #a8a8a8;
+            border-radius: 19px;
+            padding: 0 16px;
+            box-sizing: border-box;
+            transition: all 1s ease-in-out;
+        }
+
+        .line {
+            width: 3px;
+            height: 14px;
+            display: block;
+            background-color: #a8a8a8;
+            transform: rotate(320deg);
+            position: absolute;
+            left: 30px;
+            top: 32px;
+            z-index: 10;
+            opacity: 1;
+            transition: all 1s ease-in-out;
+        }
+
+        input:focus,
+        input:valid {
+            width: 180px;
+        }
+
+        input:focus+.line,
+        input:valid+.line {
+            width: 1px;
+            height: 16px;
+            left: 19px;
+            top: 10px;
+            opacity: 0;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <label>
+            <input type="text" required>
+            <span class="line"></span>
+        </label>
+    </div>
+</body>
+
+</html>

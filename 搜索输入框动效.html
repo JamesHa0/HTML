@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>搜索输入框动效</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .label77 {
+            width: 240px;
+            height: 42px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inp77 {
+            width: 240px;
+            height: 42px;
+            line-height: 42px;
+            padding: 0 16px;
+            padding-right: 42px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            font-size: 14px;
+            border-radius: 21px;
+            color: #333;
+            position: absolute;
+            list-style: none;
+            outline-style: none;
+        }
+
+        .search-btn77 {
+            position: absolute;
+            top: 23px;
+            right: 35px;
+        }
+
+        .search-btn77:before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: -14px;
+            transition: border 0.32s linear;
+        }
+
+        .search-btn77:after {
+            content: '';
+            width: 2px;
+            height: 8px;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: block;
+            position: absolute;
+            top: 3px;
+            right: -19px;
+            transform: rotate(-45deg);
+            transition: background-color 0.32s linear;
+        }
+
+        .label77:hover.inp77,
+        .inp77:focus,
+        .inp77:valid {
+            color: #000000;
+            border: 1px solid rgba(29, 52, 202, 0.4);
+        }
+
+        .inp77:valid+.search-btn77:before {
+            border: 2px solid rgba(29, 52, 202, 1);
+        }
+
+        .inp77:valid+.search-btn77:after {
+            background-color: rgba(29, 52, 202, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <label class="label77">
+            <input class="inp77" size="16" type="search" placeholder="请输入关键字" required>
+            <span class="search-btn77"></span>
+        </label>
+    </div>
+</body>
+
+</html>

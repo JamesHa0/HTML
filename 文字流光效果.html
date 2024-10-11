@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>文字流光效果</title>
+    <style>
+        .app {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text71 {
+            font-weight: 600;
+            font-size: 18px;
+            color: transparent;
+            letter-spacing: 4px;
+            margin: 0;
+            padding: 0 16px;
+            background: linear-gradient(to right, #000 0, #ffff00 20%, #000 40%);
+            background-position: -32px 0;
+            -webkit-background-clip: text;
+            animation: eff71 3s linear infinite;
+        }
+
+        @keyframes eff71 {
+            to {
+                background-position: 130px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <p class="text71">文字流光效果</p>
+    </div>
+</body>
+
+</html>
